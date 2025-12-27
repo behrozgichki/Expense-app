@@ -3,25 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Total expense</title>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<input type="number" placeholder="enter your expense" id="price">
-<label >Choose a Category:</label>
-<select name="language" id="language">
-  <option value="food">Food</option>
-  <option value="petrol">Petrol</option>
-  <option value="health">Health</option>
-  <option value="travel" selected>Travel</option>
-</select><br><br>
-<input type="text" id="remarks"><br><br>
+ <div class="container">
+    <h1> Expense Tracker</h1>
 
-<button id="expenseAdd" onclick="addTodo()">Add Expense</button>
- <ol id="ol">
-            
-        </ol>
+    <div class="form-card">
+      <input type="number" placeholder="Enter expense amount" id="price">
 
+      <select id="language">
+        <option value="food"> Food</option>
+        <option value="petrol"> Petrol</option>
+        <option value="health"> Health</option>
+        <option value="travel"> Travel</option>
+      </select>
 
+      <input type="text" id="remarks" placeholder="Remarks">
+
+      <button id="expenseAdd" onclick="addTodo()">Add Expense</button>
+    </div>
+
+    <ol id="ol" class="expense-list"></ol>
+    <h2 id="total">Total Expense: Rs 0</h2>
+
+    
 
   <script src="app.js"></script>
 </body>
